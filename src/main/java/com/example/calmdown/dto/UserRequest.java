@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 @Getter
 @NoArgsConstructor
-public class LoginRequest {
+public class UserRequest {
 
     private String phone;
     private String emergency_phone;

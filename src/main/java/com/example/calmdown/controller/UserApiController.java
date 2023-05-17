@@ -1,6 +1,6 @@
 package com.example.calmdown.controller;
 
-import com.example.calmdown.dto.LoginRequest;
+import com.example.calmdown.dto.UserRequest;
 import com.example.calmdown.dto.UserResponse;
 import com.example.calmdown.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -16,8 +16,8 @@ public class UserApiController {
 
     /** User 정보를 데이터베이스에 저장**/
     @PostMapping("/user")
-    public ResponseEntity<LoginRequest> create(@RequestBody LoginRequest loginRequest){
-        userService.create(loginRequest);
+    public ResponseEntity<UserRequest> create(@RequestBody UserRequest userRequest){
+        userService.create(userRequest);
         return ResponseEntity.status(HttpStatus.OK).body(null);
     }
 

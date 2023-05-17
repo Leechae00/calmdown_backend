@@ -1,6 +1,6 @@
 package com.example.calmdown.service;
 
-import com.example.calmdown.dto.LoginRequest;
+import com.example.calmdown.dto.UserRequest;
 import com.example.calmdown.dto.UserResponse;
 import com.example.calmdown.entity.User;
 import com.example.calmdown.repository.UserRepository;
@@ -14,11 +14,11 @@ public class UserService {
     private final UserRepository userRepository;
 
     /** DTO to Entity**/
-    public void create(LoginRequest loginRequest){
+    public void create(UserRequest userRequest){
         User user = new User(
-                null, loginRequest.getPhone(), loginRequest.getEmergency_phone(),
-                loginRequest.getGender(), loginRequest.getLogin_id(), loginRequest.getLogin_password(),
-                loginRequest.getBirth()
+                null, userRequest.getPhone(), userRequest.getEmergency_phone(),
+                userRequest.getGender(), userRequest.getLogin_id(), userRequest.getLogin_password(),
+                userRequest.getBirth()
         );
 
         userRepository.save(user);
