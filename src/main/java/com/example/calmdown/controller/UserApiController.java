@@ -16,7 +16,7 @@ public class UserApiController {
 
     /** User 정보를 데이터베이스에 저장**/
     @PostMapping("/user")
-    public ResponseEntity<UserRequest> create(@RequestBody UserRequest userRequest){
+    public ResponseEntity<?> create(@RequestBody UserRequest userRequest){
         userService.create(userRequest);
         return ResponseEntity.status(HttpStatus.OK).body(null);
     }

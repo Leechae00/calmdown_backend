@@ -22,12 +22,11 @@ public class MedicineApiController {
     }
 
     @GetMapping("/medicine")
-    public ResponseEntity<MedicineResponse> read(@RequestParam Long medicineID){
-        MedicineResponse medicineResponse = medicineService.read(medicineID);
+    public ResponseEntity<MedicineResponse> read(@RequestParam Long userID){
+        MedicineResponse medicineResponse = medicineService.read(userID);
         return (medicineResponse != null)?
                 ResponseEntity.status(HttpStatus.OK).body(medicineResponse):
                 ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
 
     }
-
 }

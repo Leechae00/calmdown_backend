@@ -15,12 +15,14 @@ public class UserService {
 
     /** DTO to Entity**/
     public void create(UserRequest userRequest){
+        // 안드로이드에서 보낸 데이터로 User Entity 생성
         User user = new User(
                 null, userRequest.getPhone(), userRequest.getEmergency_phone(),
                 userRequest.getGender(), userRequest.getLogin_id(), userRequest.getLogin_password(),
                 userRequest.getBirth()
         );
 
+        // User Entity를 DB애 저장
         userRepository.save(user);
     }
 

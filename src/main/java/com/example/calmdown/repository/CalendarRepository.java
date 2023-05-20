@@ -1,12 +1,13 @@
 package com.example.calmdown.repository;
 
-import com.example.calmdown.entity.Medicine;
+import com.example.calmdown.entity.Calendar;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface MedicineRepository extends JpaRepository<Medicine, Long> {
+public interface CalendarRepository extends JpaRepository<Calendar, Long> {
 
-    Medicine findMedicineByUser_Id(@Param("userID") Long userID);
+    Calendar findCalenderByUser_ID(@Param("userID") Long userID);
+
 }

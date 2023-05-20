@@ -5,26 +5,37 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalTime;
+import java.time.LocalDate;
+
 
 @Getter
 @Entity
-@Table(name = "medicine")
+@Table(name = "calender")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Medicine {
+public class Calendar {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private int dosing;
+    private String title;
 
     @Column
-    private LocalTime time;
+    private String memo;
+
+    @Column
+    private LocalDate datetime;
+
+    @Column
+    //발작강도 기록
+    private int seizure_intensity;
 
     @OneToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+
+
 }
