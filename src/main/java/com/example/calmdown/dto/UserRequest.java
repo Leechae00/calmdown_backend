@@ -9,9 +9,9 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class UserRequest {
 
-    private String phone;
-    private String emergency_phone;
-    private String gender;
+    private String phoneNum_Value;
+    private String EM_PhoneNum_Value;
+    private String sex_Value;
     private String login_id;
     private String login_password;
     private LocalDate birth;

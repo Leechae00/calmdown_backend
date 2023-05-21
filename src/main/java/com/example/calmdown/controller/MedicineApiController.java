@@ -2,7 +2,6 @@ package com.example.calmdown.controller;
 
 import com.example.calmdown.dto.MedicineRequest;
 import com.example.calmdown.dto.MedicineResponse;
-import com.example.calmdown.dto.UserResponse;
 import com.example.calmdown.service.MedicineService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -16,7 +15,7 @@ public class MedicineApiController {
     private final MedicineService medicineService;
 
     @PostMapping("/medicine")
-    public ResponseEntity<MedicineResponse> create(@RequestBody MedicineRequest medicineRequest) {
+    public ResponseEntity<?> create(@RequestBody MedicineRequest medicineRequest) {
         medicineService.create(medicineRequest);
         return ResponseEntity.status(HttpStatus.OK).body(null);
     }

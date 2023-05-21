@@ -21,19 +21,24 @@ public class CalendarService {
                 calendarRequest.getDaytime(),calendarRequest.getSeizure_intensity(),
                 new User(calendarRequest.getUser_id())
         );
+
         calendarRepository.save(calendar);
     }
     public CalendarResponse read(Long userID){
-        Calendar calendar = calendarRepository.findCalenderByUser_ID(userID);
+
+        Calendar calendar = calendarRepository.findCalenderByUser_Id(userID);
+
         if(calendar == null){
             return null;
         }
+
         CalendarResponse calendarResponse = new CalendarResponse(
                 calendar.getTitle(),
                 calendar.getMemo(),
                 calendar.getDaytime(),
                 calendar.getSeizure_intensity()
         );
+
         return calendarResponse;
     }
 }

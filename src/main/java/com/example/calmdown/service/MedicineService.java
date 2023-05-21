@@ -23,7 +23,9 @@ public class MedicineService {
         medicineRepository.save(medicine);
     }
     public MedicineResponse read(Long userID){
+
         Medicine medicine = medicineRepository.findMedicineByUser_Id(userID);
+
         if(medicine == null){
             return null;
         }

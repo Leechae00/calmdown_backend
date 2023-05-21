@@ -19,17 +19,17 @@ public class Calendar {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String title;
 
-    @Column
+    @Column(nullable = false)
     private String memo;
 
-    @Column
+    @Column(nullable = false)
     private LocalDate daytime;
 
-    @Column
-    //발작강도 기록
+    @Column(nullable = false)
+    //발작강도 기록 1-10
     private int seizure_intensity;
 
     @OneToOne

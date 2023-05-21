@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CalendarRepository extends JpaRepository<Calendar, Long> {
 
-    Calendar findCalenderByUser_ID(@Param("userID") Long userID);
+    Calendar findCalenderByUser_Id(@Param("userID") Long userID);
 
 }

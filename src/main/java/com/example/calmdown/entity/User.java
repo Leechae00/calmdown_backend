@@ -19,13 +19,13 @@ public class User {
     private Long id;
 
     @Column(nullable = false, unique = true)
-    private String phone;
+    private String phoneNum_Value;
 
     @Column
-    private String emergency_phone;
+    private String EM_PhoneNum_Value;
 
     @Column(nullable = false)
-    private String gender;
+    private String sex_Value;
 
     @Column(nullable = false)
     private String login_id;
