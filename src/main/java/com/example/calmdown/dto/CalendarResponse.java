@@ -17,7 +17,7 @@ public class CalendarResponse {
 
     private String memo;
 
-    private LocalDate datetime;
+    private LocalDate daytime;
 
     //발작강도 기록
     private int seizure_intensity;

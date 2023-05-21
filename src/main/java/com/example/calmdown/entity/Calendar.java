@@ -26,7 +26,7 @@ public class Calendar {
     private String memo;
 
     @Column
-    private LocalDate datetime;
+    private LocalDate daytime;
 
     @Column
     //발작강도 기록

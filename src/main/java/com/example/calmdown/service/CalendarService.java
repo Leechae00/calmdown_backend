@@ -18,7 +18,7 @@ public class CalendarService {
     public void create(CalendarRequest calendarRequest){
         Calendar calendar = new Calendar(
                 null, calendarRequest.getTitle(),calendarRequest.getMemo(),
-                calendarRequest.getDatetime(),calendarRequest.getSeizure_intensity(),
+                calendarRequest.getDaytime(),calendarRequest.getSeizure_intensity(),
                 new User(calendarRequest.getUser_id())
         );
         calendarRepository.save(calendar);
@@ -31,7 +31,7 @@ public class CalendarService {
         CalendarResponse calendarResponse = new CalendarResponse(
                 calendar.getTitle(),
                 calendar.getMemo(),
-                calendar.getDatetime(),
+                calendar.getDaytime(),
                 calendar.getSeizure_intensity()
         );
         return calendarResponse;
