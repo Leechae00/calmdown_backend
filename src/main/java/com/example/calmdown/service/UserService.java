@@ -18,6 +18,7 @@ public class UserService {
         // 안드로이드에서 보낸 데이터로 User Entity 생성
         User user = new User(
                 null, userRequest.getPhoneNum_Value(), userRequest.getEM_PhoneNum_Value(),
+                userRequest.getName(),userRequest.getAge(),
                 userRequest.getSex_Value(), userRequest.getLogin_id(), userRequest.getLogin_password(),
                 userRequest.getBirth()
         );
@@ -38,6 +39,7 @@ public class UserService {
 
         UserResponse userResponse = new UserResponse(
                 user.getPhoneNum_Value(), user.getEM_PhoneNum_Value(),
+                user.getName(),user.getAge(),
                 user.getSex_Value(), user.getLogin_id(), user.getLogin_password(),
                 user.getBirth()
         );

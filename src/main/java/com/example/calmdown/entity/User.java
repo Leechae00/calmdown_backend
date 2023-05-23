@@ -18,11 +18,17 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String phoneNum_Value;
 
     @Column
     private String EM_PhoneNum_Value;
+
+    @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false)
+    private Integer age;
 
     @Column(nullable = false)
     private String sex_Value;
