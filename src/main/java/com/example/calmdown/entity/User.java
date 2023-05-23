@@ -18,11 +18,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String phoneNum_Value;
 
     @Column
-    private String EM_PhoneNum_Value;
+    private String em_PhoneNum_Value;
 
     @Column(nullable = false)
     private String name;
@@ -45,4 +45,5 @@ public class User {
     public User(Long id){
         this.id = id;
     }
+
 }

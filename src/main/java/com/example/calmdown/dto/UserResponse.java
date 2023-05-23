@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class UserResponse {
     private String phoneNum_Value;
-    private String EM_PhoneNum_Value;
+    private String em_PhoneNum_Value;
     private String name;
     private Integer age;
     private String sex_Value;
