@@ -33,11 +33,6 @@ public class User {
     @Column(nullable = false)
     private String sex_Value;
 
-    @Column(nullable = false)
-    private String login_id;
-
-    @Column(nullable = false)
-    private String login_password;
 
     @Column(nullable = false)
     private LocalDate birth;

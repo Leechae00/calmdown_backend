@@ -15,7 +15,5 @@ public class UserResponse {
     private String name;
     private Integer age;
     private String sex_Value;
-    private String login_id;
-    private String login_password;
     private LocalDate birth;
 }

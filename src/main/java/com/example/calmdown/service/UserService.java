@@ -19,7 +19,7 @@ public class UserService {
         User user = new User(
                 null, userRequest.getPhoneNum_Value(), userRequest.getEm_PhoneNum_Value(),
                 userRequest.getName(),userRequest.getAge(),
-                userRequest.getSex_Value(), userRequest.getLogin_id(), userRequest.getLogin_password(),
+                userRequest.getSex_Value(),
                 userRequest.getBirth()
         );
 
@@ -43,7 +43,7 @@ public class UserService {
         UserResponse userResponse = new UserResponse(
                 user.getPhoneNum_Value(), user.getEm_PhoneNum_Value(),
                 user.getName(),user.getAge(),
-                user.getSex_Value(), user.getLogin_id(), user.getLogin_password(),
+                user.getSex_Value(),
                 user.getBirth()
         );
 
