@@ -34,9 +34,6 @@ public class User {
     private String sex_Value;
 
 
-    @Column(nullable = false)
-    private LocalDate birth;
-
     public User(Long id){
         this.id = id;
     }
